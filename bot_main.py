@@ -32,7 +32,14 @@ async def on_message(message):
         await message.delete()
         ch = client.get_channel(863672689612161044)
         await ch.send (f"{message.author.mention} 님이 욕을 사용하셨습니다.")
-
+    
+    
+    if "(욕)" in message.content:
+        await message.delete()
+        ch = client.get_channel(863672689612161044)
+        await ch.send (f"{message.author.mention} 님이 욕을 사용하셨습니다.")
+        
+        
     if "씨발" in message.content:
         await message.delete()
         ch = client.get_channel(863672689612161044)
